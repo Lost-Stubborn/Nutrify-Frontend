@@ -6,14 +6,13 @@ import Login from './components/Login'
 import Notfound from './components/Notfound'
 import Track from './components/Track'
 import { UserContext } from './contexts/UserContext'
+import Private from './components/Private'
 
 function App() {
 
-  const [loggedUser, setLoggedUser] = useState(null)
 
-  useEffect(() => {
-    console.log(loggedUser)
-  })
+  const [loggedUser, setLoggedUser] = useState(localStorage.getItem("nutrify-user"))
+  
 
   return (
     <>
@@ -27,12 +26,12 @@ function App() {
               <Route path='/' element={<Login/>}/>
               <Route path='/register' element={<Register/>}/>
               <Route path='/login' element={<Login/>}/>
-              <Route path='/track' element={<Track/>}/>
+              <Route path='/track' element={<Private Component={Track}/>}/>
               <Route path='*' element={<Notfound/>}/>
 
           </Routes>
-
-        </BrowserRouter>
+          
+          </BrowserRouter>
 
       </UserContext.Provider>
 

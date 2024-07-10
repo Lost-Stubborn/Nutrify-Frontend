@@ -4,7 +4,7 @@ import { UserContext } from "../contexts/UserContext"
 
 function Login() {
 
-    const loggedInData = useContext(UserContext)
+    const loggedData = useContext(UserContext)
 
     const navigate = useNavigate()
 
@@ -57,7 +57,7 @@ function Login() {
             if(data.token !== undefined) {
                 localStorage.setItem("nutrify-user", JSON.stringify(data))
 
-                loggedInData.setLoggedUser(data)
+                loggedData.setLoggedUser(data)
 
                 navigate("/track")
             }
