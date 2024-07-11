@@ -11,8 +11,11 @@ import Private from './components/Private'
 function App() {
 
 
-  const [loggedUser, setLoggedUser] = useState(localStorage.getItem("nutrify-user"))
+  const [loggedUser, setLoggedUser] = useState(JSON.parse(localStorage.getItem("nutrify-user")))
   
+  // useEffect(() => {
+  //   console.log(loggedUser)
+  // })
 
   return (
     <>

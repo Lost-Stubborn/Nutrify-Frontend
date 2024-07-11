@@ -75,3 +75,32 @@ a {
     border-radius: 5px;
     opacity: 0;
 }
+
+/* Track page css */
+
+.search {
+    width: 100%;
+    padding: 10px 0px;
+    /* background-color: gray; */
+}
+
+.track-container {
+    align-items: start;
+}
+
+.search-inp {
+    width: 100%;
+    height: 45px;
+    text-indent: 10px;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid gray;
+    font-size: 18px;
+}
+
+.search-results {
+    width: 100%;
+    padding: 10px 5px;
+    background-color: gray;
+    margin-top: 10px;
+}
