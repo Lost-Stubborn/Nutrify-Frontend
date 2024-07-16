@@ -1,11 +1,18 @@
 import { useContext, useEffect, useState } from "react"
 import { UserContext } from "../contexts/UserContext"
+import Food from "./Food"
 
 function Track() {
 
     const loggedData = useContext(UserContext)
 
     const [foodItems,setFoodsItems] = useState([])
+    const [food,setFood] = useState(null)
+
+    useEffect(() => {
+        console.log(food)   
+    })
+
 
     function searchFood(event) {
 
@@ -54,7 +61,9 @@ function Track() {
                                 {
                                     foodItems.map((item) => {
                                         return (
-                                            <p className="item" key={item._id}>{item.name}</p>
+                                            <p className="item" onClick={() => {
+                                                setFood(item)
+                                            }} key={item._id}>{item.name}</p>
                                         )
                                     })
                                 }
@@ -65,6 +74,12 @@ function Track() {
                      }
 
                 </div>
+
+                {
+                    food!==null ? (<Food food={food}/>) : null
+                }
+
+                      
 
             </section>
         </>
