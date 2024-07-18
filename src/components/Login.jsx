@@ -29,7 +29,7 @@ function Login() {
         event.preventDefault()
         console.log(userCreds)
 
-        fetch("http://localhost:8000/login", {
+        fetch("https://nutrify-api-kappa.vercel.app/login", {
             method: "POST",
             body: JSON.stringify(userCreds),
             headers: {

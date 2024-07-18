@@ -18,7 +18,7 @@ function Track() {
     function searchFood(event) {
 
         if(event.target.value !== "") {
-            fetch(`http://localhost:8000/foods/${event.target.value}`, {
+            fetch(`https://nutrify-api-kappa.vercel.app/${event.target.value}`, {
                 method: "GET",
                 headers: {
                     "Authorization": `Bearer ${loggedData.loggedUser.token}`
