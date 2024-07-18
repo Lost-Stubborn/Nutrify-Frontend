@@ -1,5 +1,6 @@
 import { UserContext } from "../contexts/UserContext"
 import { useContext } from "react"
+import { Link } from "react-router-dom"
 
 function Header() {
 
@@ -15,7 +16,8 @@ function Header() {
     return (
         <div>
             <ul>
-                <li>Home</li>
+                <Link to='/track'><li>Track</li></Link>
+                <Link to='/diet'><li>Diet</li></Link>
                 <li onClick={logout}>Logout</li>
             </ul>
         </div>

@@ -59,7 +59,8 @@ function Login() {
 
                 loggedData.setLoggedUser(data)
 
-                navigate("/track")
+                // navigate("/track")
+                navigate("/diet")
             }
             
 

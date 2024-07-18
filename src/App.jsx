@@ -5,6 +5,7 @@ import Register from './components/Register'
 import Login from './components/Login'
 import Notfound from './components/Notfound'
 import Track from './components/Track'
+import Diet from './components/Diet'
 import { UserContext } from './contexts/UserContext'
 import Private from './components/Private'
 
@@ -30,6 +31,7 @@ function App() {
               <Route path='/register' element={<Register/>}/>
               <Route path='/login' element={<Login/>}/>
               <Route path='/track' element={<Private Component={Track}/>}/>
+              <Route path='/diet' element={<Private Component={Diet}/>}/>
               <Route path='*' element={<Notfound/>}/>
 
           </Routes>

@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react"
 import { UserContext } from "../contexts/UserContext"
 import Food from "./Food"
+import Header from "./Header"
 
 function Track() {
 
@@ -47,6 +48,8 @@ function Track() {
     return (
         <>
             <section className="container track-container">
+
+                <Header/>
 
                 <div className="search">
 
