@@ -53,7 +53,7 @@ function Food(props) {
 
       console.log(trackedItem)
 
-      fetch("https://nutrify-api-kappa.vercel.app/track", {
+      fetch("https://nutrify-api-s2az.onrender.com/track", {
          method: "POST",
          body: JSON.stringify(trackedItem),
          headers: {

@@ -25,7 +25,7 @@ function Register() {
         event.preventDefault()
         console.log(userDetails)
 
-        fetch("https://nutrify-api-kappa.vercel.app/register", {
+        fetch("https://nutrify-api-s2az.onrender.com/register", {
             method: "POST",
             body: JSON.stringify(userDetails),
             headers: {

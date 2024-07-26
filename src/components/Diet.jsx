@@ -19,7 +19,7 @@ function Diet() {
 
     useEffect(() => {
 
-        fetch(`https://nutrify-api-kappa.vercel.app/${loggedData.loggedUser.userid}/${date.getMonth()+1}-${date.getDate()}-${date.getFullYear()}`,{
+        fetch(`https://nutrify-api-s2az.onrender.com/${loggedData.loggedUser.userid}/${date.getMonth()+1}-${date.getDate()}-${date.getFullYear()}`,{
             method: "GET",
             headers: {
                 "Authorization": `Bearer ${loggedData.loggedUser.token}`
